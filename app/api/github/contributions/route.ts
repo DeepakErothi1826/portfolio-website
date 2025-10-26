@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic"
 
 export async function GET(request: Request) {
-  const username = process.env.GITHUB_USERNAME || "your-github-username"
+  const username = process.env.GITHUB_USERNAME || "DeepakErothi1826"
   const token = process.env.GITHUB_TOKEN
 
   if (!token) {

@@ -5,8 +5,8 @@ import "./globals.css"
 import { Providers } from "./providers"
 
 export const metadata: Metadata = {
-  title: "Aayush Mishra",
-  description: "Engineer",
+  title: "Deepak Erati",
+  description: "Front-End Developer",
 }
 
 export const viewport: Viewport = {

@@ -5,7 +5,8 @@ import type { ReactElement } from "react"
 type Props = { name: string; size?: number; className?: string; title?: string }
 
 // simple brand-like SVGs (not official marks) with recognizable colors
-function TypeScriptIcon({ size = 16 }: { size?: number }) {
+function TypeScriptIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="TypeScript">
       <rect width="48" height="48" rx="8" fill="#3178C6" />
@@ -13,8 +14,8 @@ function TypeScriptIcon({ size = 16 }: { size?: number }) {
     </svg>
   )
 }
-
-function NextJSIcon({ size = 16 }: { size?: number }) {
+function NextJSIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Next.js">
       <circle cx="24" cy="24" r="22" fill="black" />
@@ -23,8 +24,8 @@ function NextJSIcon({ size = 16 }: { size?: number }) {
     </svg>
   )
 }
-
-function MongoIcon({ size = 16 }: { size?: number }) {
+function MongoIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="MongoDB">
       <path d="M24 4s10 9 10 22-10 18-10 18-10-5-10-18 10-22 10-22z" fill="#10A34A" />
@@ -32,16 +33,16 @@ function MongoIcon({ size = 16 }: { size?: number }) {
     </svg>
   )
 }
-
-function SupabaseIcon({ size = 16 }: { size?: number }) {
+function SupabaseIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Supabase">
       <path d="M28 6L10 28h14l-4 14L38 20H24l4-14z" fill="#3ECF8E" />
     </svg>
   )
 }
-
-function CloudinaryIcon({ size = 16 }: { size?: number }) {
+function CloudinaryIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Cloudinary">
       <circle cx="24" cy="20" r="8" fill="#2A6EEA" />
@@ -49,8 +50,8 @@ function CloudinaryIcon({ size = 16 }: { size?: number }) {
     </svg>
   )
 }
-
-function AuthJSIcon({ size = 16 }: { size?: number }) {
+function AuthJSIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Auth.js">
       <rect width="48" height="48" rx="8" fill="#000" />
@@ -58,8 +59,8 @@ function AuthJSIcon({ size = 16 }: { size?: number }) {
     </svg>
   )
 }
-
-function GroqIcon({ size = 16 }: { size?: number }) {
+function GroqIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Groq">
       <rect width="48" height="48" rx="12" fill="#FF4154" />
@@ -67,8 +68,8 @@ function GroqIcon({ size = 16 }: { size?: number }) {
     </svg>
   )
 }
-
-function PythonIcon({ size = 16 }: { size?: number }) {
+function PythonIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Python">
       <rect x="6" y="6" width="18" height="18" rx="6" fill="#3776AB" />

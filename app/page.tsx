@@ -30,51 +30,56 @@ import ExperienceSection from "@/components/experience-section"
 export default function RotPage() {
   const projectsList: ProjectType[] = [
     {
-      name: "Prepwise AI",
+      name: "Smoke&Jones Restaurant Mobile Appication",
       imageUrl:
-        "https://res.cloudinary.com/dtunq8gr3/image/upload/t_prepwise-beta/prepwise_meogv1",
+        "https://image2url.com/images/1761475063565-ac287aae-0d25-4f73-acfa-905124af7aa2.png",
       description:
-        "This Platform Offers a Sleek and Modern Experience for Job Interview Preparation. Powered by Vapi-AI Voice Agent, this Website uses AI based Voice Agents to ask users Questions and help them Prepare for Interviews.",
-      liveLink: "https://prep-wise-v2.vercel.app/",
+        "Smoke&Jones Restaurant Mobile Application is a modern food ordering app that offers an intuitive and visually engaging interface for browsing menus, customizing orders, and completing secure payments — delivering a seamless and enjoyable dining experience right from your phone.",
+      liveLink: "https://www.figma.com/proto/Ttpb8odZezsB2TO4H4JQCj/Restaurant-menu?node-id=70-554&starting-point-node-id=48%3A300",
       work: "Solo Work",
       status: "Active",
+       techStack: ["React", "TypeScript", "TailwindCSS"]
     },
     {
-      name: "AayuOCR - Image to Text Extractor",
-      imageUrl: "https://res.cloudinary.com/dtunq8gr3/image/upload/t_imgtotxt/imgtotxt_kxq2td",
+      name: "FruityBuss Parallax Experience",
+      imageUrl: "https://image2url.com/images/1761475251018-8f59f8b4-5f52-4806-84ac-4ff915158521.png",
       description:
-        "An API based Image-to-Text Converter and Translator Website. Extract Text from Images and Translate it into any Indian Language of your Convenience. Extract the Embedded Text using Powerful Optical Character Recognition (OCR) Technology. Useful for Reading - Scanned Documents, Printed Materials, Signs, or Handwritten Notes.",
-      liveLink: "https://image-text-extractor-seven.vercel.app/",
+        "FruityBuss is a parallax-based UI/UX design project showcasing a vibrant, interactive beverage website with smooth animations and engaging user experience.",
+      liveLink: "https://www.figma.com/proto/cblPAFb9yEOMISie1zJDjf/Untitled?node-id=0-1&fuid=1412720828761625255",
       work: "Solo Work",
       status: "Active",
+       techStack: ["React", "TypeScript", "TailwindCSS"]
     },
         {
-      name: "Streamify",
-      imageUrl: "https://res.cloudinary.com/dtunq8gr3/image/upload/t_streamify/screenshot-for-readme_1_q0c52p",
+      name: "Ericson Mobile Application UI/UX Design",
+      imageUrl: "https://image2url.com/images/1761475416834-53186d5c-a7ee-4c9d-b743-8376f9593954.png",
       description:
-        "A Full-Stack Website for Real-time Messaging with Typing Indicators & Reactions. Users can do 1-on-1 and Group Video Calls with Screen Sharing & Recording . Safe and Secure Usability with JWT Authentication & Protected Routes.",
-      liveLink: "https://github.com/aayushmishramechatronics/streamify",
-      work: "Solo Work",
-      status: "Inactive",
-    },
-    {
-      name: "NEO-Tracker",
-      imageUrl: "https://res.cloudinary.com/dtunq8gr3/image/upload/t_neo/neotracker_id3swi",
-      description:
-        "A Modern Application for Tracking and Visualizing Near-Earth Objects using NASA's NeoWs API.\nReal-time NEO data from NASA's API and Interactive Charts and Analytics\n3D WebGL visualization with orbital mechanics\nAdvanced Filtering and Search Capabilities",
-      liveLink: "https://neo-tracker-nasa.vercel.app/",
+        "Ericson Mobile Application UI/UX Design is a clean, user-friendly interface crafted to simplify health insurance access and management. It features intuitive login and signup flows, clear navigation, and essential service details, all presented in a modern, responsive layout for a seamless user experience across devices.",
+      liveLink: "https://www.figma.com/proto/tuFr9b3Qmnc8hRGeLObBfh/Untitled?node-id=1-3&starting-point-node-id=9%3A2",
       work: "Solo Work",
       status: "Active",
+       techStack: ["React", "TypeScript", "TailwindCSS"]
     },
     {
-      name: "HackTracker - Track All Hackathons",
+      name: "Login page sign-up flow Ui/Ux",
+      imageUrl: "https://image2url.com/images/1761475548872-7e832c30-c49a-4e7b-b81d-6ffc422170ad.png",
+      description:
+        "A clean and intuitive login and registration interface designed for a seamless user experience. The flow emphasizes simplicity, accessibility, and modern design principles—guiding users effortlessly through account creation and authentication. Clear visual hierarchy, engaging micro-interactions, and responsive layouts ensure consistency across devices.",
+      liveLink: "https://www.figma.com/proto/bk4wze5dJnU1tVWHKaKqCx/Mobile-App-Signup-Flow?node-id=7-64&p=f&t=W9XrZpaYsE2NIzgP-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=7%3A64",
+      work: "Solo Work",
+      status: "Active",
+       techStack: ["React", "TypeScript", "TailwindCSS"]
+    },
+    {
+      name: "MarvelVerse Cinematic Hero Showcase",
       imageUrl:
-        "https://res.cloudinary.com/dtunq8gr3/image/upload/t_hacktrack/hacktracker_ulyfiu",
+        "https://image2url.com/images/1761476171243-73066e0e-1c64-45fd-bcf7-629d04f9c3c4.png",
       description:
-        "A Full-Stack Website for Tracking Hackathon which gives Status of All the Upcoming, and Registered Hackathons by the User. You can also Add/Delete Hackathon and Update your Dashboard anytime, anywhere.",
-      liveLink: "https://hacktracker-mit.vercel.app/",
+        "A Marvel-themed responsive website with a bold, cinematic UI, showcasing iconic superheroes through striking visuals, smooth navigation, and immersive storytelling.",
+      liveLink: "https://www.figma.com/proto/Kgyl7WjNQudULBvdlEssWr/Untitled?node-id=3-2&starting-point-node-id=3%3A2&scaling=scale-down&content-scaling=fixed",
       work: "Solo Work",
       status: "Active",
+       techStack: ["React", "TypeScript", "TailwindCSS"]
     },
   ]
 
@@ -212,58 +217,52 @@ export default function RotPage() {
               scrolled: { top: 0, position: "fixed", height: 60, backdropFilter: "blur(10px)" },
             }}
           >
-            <motion.div className="relative h-[100%] w-[100%] flex items-center justify-end px-[15px]">
-              <motion.img
-                src="https://res.cloudinary.com/dtunq8gr3/image/upload/t_aayushmishra/aayushmishra_pwbddj"
-                alt="Profile photo of Aayush Mishra"
-                initial={{ height: 200, width: 200, borderRadius: 9999, margin: "0px auto", position: "static" }}
-                animate={isScrolled ? "scrolled" : "normal"}
-                variants={{
-                  normal: { height: 200, width: 200, borderRadius: 9999 },
-                  scrolled: { height: 40, width: 40, borderRadius: 9999, position: "absolute", top: 10, left: 10 },
-                }}
-                whileHover={{ boxShadow: "0 0 30px 2px rgba(255, 255, 255, 0.5)" }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                style={{ objectFit: "cover", transition: "box-shadow 0.1s" }}
-              />
-            </motion.div>
+            <motion.div className="relative h-full w-full flex items-center justify-end px-[15px]">
+                <motion.img
+                  // src="https://image2url.com/images/1761469062549-cafd14bb-7bde-41e0-8d0f-08288f537421.jpg"
+                  src="https://image2url.com/images/1761469279402-9e0ba78f-50e9-4919-a49d-020336fe14ed.png"
+                  alt="Profile photo of Aayush Mishra"
+                  initial={{ height: 200, width: 200, borderRadius: 9999, margin: "0px auto", position: "static" }}
+                  animate={isScrolled ? "scrolled" : "normal"}
+                  variants={{
+                    normal: { height: 200, width: 200, borderRadius: 9999 },
+                    scrolled: { height: 40, width: 40, borderRadius: 9999, position: "absolute", top: 10, left: 10 },
+                  }}
+                  whileHover={{ boxShadow: "0 0 30px 2px rgba(255, 255, 255, 0.5)" }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  style={{ objectFit: "cover", transition: "box-shadow 0.1s" }}
+                />
+              </motion.div>
           </motion.div>
 
-          <div className="flex flex-col items-center gap-[2px]">
-            <h1 className="font-mono font-semibold leading-10 text-3xl">Aayush Mishra</h1>
-            <p className={styles.SWEpara}>Robotics Engineer</p>
+          <div className="flex flex-col items-center gap-0.5">
+            <h1 className="font-mono font-semibold leading-10 text-3xl">Deepak Erati</h1>
+            <p className={styles.SWEpara}>Front-End Developer</p>
           </div>
 
           <div className={styles.socialsDiv}>
-            <Link href="https://x.com/aayushmishra" target="_blank">
+            <Link href="https://x.com/DeepakErati18" target="_blank">
               <div className={styles.socialsItem}>
                 <Image height={15} width={15} alt="" src="/x-social-media-white-icon.svg" unoptimized />
                 <p>X app</p>
               </div>
             </Link>
 
-            <Link href="https://github.com/aayushmishramechatronics" target="_blank">
+            <Link href="https://github.com/DeepakErothi1826" target="_blank">
               <div className={styles.socialsItem}>
                 <Github size={15} color="white" />
                 <p>Github</p>
               </div>
             </Link>
 
-            <Link href="https://authzed.com/" target="_blank">
-              <div className={styles.socialsItem}>
-                <Image alt="Authzed" src="/authzed.png" width={15} height={15} unoptimized />
-                <p>Authzed</p>
-              </div>
-            </Link>
-
-            <Link href="mailto:aayushmishra1105@gmail.com" target="_blank">
+            <Link href="mailto:deepakerothi7@gmail.com" target="_blank">
               <div className={styles.socialsItem}>
                 <Mail size={15} color="white" />
                 <p>Mail</p>
               </div>
             </Link>
 
-            <Link href="https://www.linkedin.com/in/aayush-anil-mishra/" target="_blank">
+            <Link href="https://www.linkedin.com/in/deepakerothi/" target="_blank">
               <div className={styles.socialsItem}>
                 <Linkedin size={15} color="white" />
                 <p>LinkedIn</p>
@@ -283,7 +282,7 @@ export default function RotPage() {
         </div>
 
         <div className={styles.bio}>
-          <p className="font-mono tracking-tighter underline leading-7 font-light text-2xl">📍Udupi, Karnataka</p>
+          <p className="font-mono tracking-tighter underline leading-7 font-light text-2xl">📍Mumbai, Maharashtra</p>
         </div>
 
         <div className={styles.tabsHolder}>
@@ -329,16 +328,16 @@ export default function RotPage() {
           <>
             <div className={styles.projectsSection}>
               {/* Move GitHub contributions above the heading as requested */}
-              <GitHubContributions username="abhraneeldhar7" />
+              <GitHubContributions username="https://github.com/DeepakErothi1826" />
 
               <h1 className="font-mono font-semibold underline leading-10 text-3xl">Projects</h1>
 
               <div className={styles.projectsHolder}>
                 {projectDisplayList.map((project, index) => (
-                  <div key={index} className="flex flex-col gap-[10px]">
+                  <div key={index} className="flex flex-col gap-2.5">
                     <ProjectCard projectDetails={project} />
                     {index < projectDisplayList.length - 1 && (
-                      <div className="bg-[var(--fgColor)] w-[90%] opacity-[0.4] font-semibold h-0.5 mx-6 my-0"></div>
+                      <div className="bg-(--fgColor) w-[90%] opacity-[0.4] font-semibold h-0.5 mx-6 my-0"></div>
                     )}
                   </div>
                 ))}
@@ -390,8 +389,8 @@ export default function RotPage() {
                   ))}
                 </Marquee>
 
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[var(--bgColor)]"></div>
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[var(--bgColor)]"></div>
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r from-(--bgColor)"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-(--bgColor)"></div>
               </div>
             </div>
           </>
@@ -414,7 +413,7 @@ export default function RotPage() {
                   <Link
                     href={c.proofUrl}
                     target="_blank"
-                    className="group relative block aspect-[16/10] overflow-hidden rounded-md"
+                    className="group relative block aspect-16/10 overflow-hidden rounded-md"
                     aria-label={`Open certificate proof: ${c.title}`}
                   >
                     <Image
@@ -445,7 +444,7 @@ export default function RotPage() {
 
         {displayTab == "articles" && (
           <>
-            <div className="flex flex-col mx-auto gap-[10px] w-[100%] max-w-[500px] mt-[50px]">
+            <div className="flex flex-col mx-auto gap-2.5 w-full max-w-[500px] mt-[50px]">
               {blogsArray && blogsArray.map((blog, index) => <DefaultBlogCard blogData={blog} key={index} />)}
             </div>
           </>
@@ -458,7 +457,7 @@ export default function RotPage() {
             </p>
           </Link>
           <p className="text-center opacity-[0.7] max-w-[580px] font-mono font-semibold text-base tracking-tight">
-            Built by Aayush Anil Mishra | Last Updated: August 31, 2025.
+            Built by Deepak Erati | Last Updated: August 31, 2025.
           </p>
         </div>
       </div>

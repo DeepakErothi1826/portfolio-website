@@ -147,9 +147,9 @@ export default function GitHubContributions({
           role="region"
           aria-label="GitHub contributions calendar"
         >
-          <div className="grid grid-flow-col auto-cols-max gap-[4px] pr-2">
+          <div className="grid grid-flow-col auto-cols-max gap-1 pr-2">
             {weeks.map((week: Week, wi: number) => (
-              <div key={wi} className="grid grid-rows-7 gap-[4px]">
+              <div key={wi} className="grid grid-rows-7 gap-1">
                 {week.contributionDays.map((day, di) => {
                   const lvl = getLevel(day.contributionCount)
                   const bg = palette[lvl] ?? palette[0]
@@ -157,7 +157,7 @@ export default function GitHubContributions({
                   return (
                     <div
                       key={di}
-                      className={`h-[12px] w-[12px] sm:h-[13px] sm:w-[13px] rounded-[3px] transition-colors duration-150 ${
+                      className={`h-3 w-3 sm:h-[13px] sm:w-[13px] rounded-[3px] transition-colors duration-150 ${
                         isEmpty ? "ring-1 ring-white/5" : ""
                       }`}
                       style={{ backgroundColor: bg }}
@@ -175,18 +175,18 @@ export default function GitHubContributions({
       {!isLoading && !error && weeks.length > 0 && (
         <div className="mt-3 flex items-center gap-2 text-xs opacity-70">
           <span className="font-semibold text-xs">Less</span>
-          <div className="flex items-center gap-[4px]">
+          <div className="flex items-center gap-1">
             {[0, 1, 2, 3, 4].map((lvl) => (
               <span
                 key={lvl}
-                className={`h-[10px] w-[10px] rounded-[2px] ${lvl === 0 ? "ring-1 ring-white/10" : ""}`}
+                className={`h-2.5 w-2.5 rounded-[2px] ${lvl === 0 ? "ring-1 ring-white/10" : ""}`}
                 style={{ backgroundColor: palette[lvl] }}
               />
             ))}
           </div>
           <span className="font-semibold text-xs">More</span>
           <Link
-            href={`https://github.com/aayushmishramechatronics`}
+            href={`https://github.com/DeepakErothi1826`}
             target="_blank"
             className="ml-auto underline hover:opacity-100 opacity-70 text-sm font-semibold"
           >

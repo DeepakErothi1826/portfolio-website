@@ -73,36 +73,57 @@ export default function ExperienceSection() {
   ]
 
   const work: Item[] = [
+     {
+      logoAlt: "Ericson Insurance TPA Pvt. Ltd.",
+      logoSrc: "/Ericson.png",
+      title: "Ericson Insurance TPA Pvt. Ltd.",
+      subtitle: "Mobile Application Developer",
+      dates: " Jun 2024 - May 2025",
+    },
     {
-      logoAlt: "Authzed logo",
-      logoSrc: "/authzed.png",
-      title: "Authzed",
-      subtitle: "Associate SDE - I",
-      dates: "August 2025 - Present",
+      logoAlt: "Shunayaverse",
+      logoSrc: "/Shunayaverse.png",
+      title: "Shunayaverse",
+      subtitle: "Full-Stack Developer",
+      dates: " Jun 2024 - May 2025",
+    },
+  {
+      logoAlt: "Meeraai Tech Solutions",
+      logoSrc: "/Meeraai.png",
+      title: "Meeraai Tech Solutions",
+      subtitle: "Full-Stack Developer Internship",
+      dates: "Nov 2023 - Apr 2024",
     },
     {
       logoAlt: "Oil and Natural Gas Corporation logo",
-      logoSrc: "/ongc.png",
-      title: "Oil and Natural Gas Corporation",
-      subtitle: "SCADA Trainee",
-      dates: "June 2025 - July 2025",
+      logoSrc: "/Codesoft.png",
+      title: "Codesoft",
+      subtitle: "UI/UX Designer Internship",
+      dates: "Aug 2023 - Nov 2023",
     },
   ]
 
   const education: Item[] = [
     {
-      logoAlt: "Manipal Institute of Technology logo",
-      logoSrc: "/mit.png",
-      title: "Manipal Institute of Technology",
-      subtitle: "B.Tech in Mechatronics Engineering",
-      dates: "July 2023 - Oct 2027",
+      logoAlt: "Vidyalankar School Of Information Technology",
+      logoSrc: "/VSIT.png",
+      title: "Vidyalankar School Of Information Technology",
+      subtitle: "Bachelor of Information Technology",
+      dates: "July 2021 - Oct 2024",
+    },
+     {
+      logoAlt: "Vishaka Dairy Jr.Collage",
+      logoSrc: "/allen.png",
+      title: "Vishaka Dairy Jr.Collage",
+      subtitle: "Xl to Xll ",
+      dates: "July 2019 - July 2021",
     },
     {
-      logoAlt: "Allen Institute logo",
-      logoSrc: "/allen.png",
-      title: "Allen Institute",
-      subtitle: "High School and JEE Preparation",
-      dates: "July 2021 - July 2023",
+      logoAlt: " The Andhra Education Socity High School",
+      logoSrc: "/Andhra.png",
+      title: "Andhara Education Socity High School",
+      subtitle: "High School ",
+      dates: "July 2007 - July 2018",
     },
   ]
 
