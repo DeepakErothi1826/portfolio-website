@@ -171,18 +171,32 @@ export default function RotPage() {
   }
 
   const certifications: CertificationType[] = [
-    // {
-    //   title: "Robotics: Aerial Robotics",
-    //   issuer: "UPenn | 2024",
-    //   imageUrl: "/images/upenn1.jpg",
-    //   proofUrl: "https://coursera.org/share/9e3d0e1d3e8d58dc42e731177e6388f1",
-    //   summary: "MATLAB and Simulation Software, Control System, Mathematical Modeling with Calculus.",
-    // },
+       {
+      title: "Ericson : Mobile Application Developer",
+      issuer: "UPenn | 2024",
+      imageUrl: "/images/Ericson Certif.jpg",
+      proofUrl: "https://image2url.com/images/1761580990285-1c0e6b44-1f99-4e7d-ba9d-4736fad2c039.jpg",
+      summary: "Mobile Application Development, UI Implementation, API Integration, and Performance Optimization for Android Applications.",
+    },
+       {
+      title: "Shunayaverse : Full-Stack Developer",
+      issuer: "UPenn | 2024",
+      imageUrl: "/images/Shunayaverse Experience.png",
+      proofUrl: "https://image2url.com/images/1761580139853-0c9ec924-0637-4e86-9f6c-8a2d92beeef3.png",
+      summary: "UI/UX Design, Wireframing, Prototyping, User Research, and Visual Design using Figma.",
+    },
+    {
+      title: "CodeSoft: UI/UX Designer",
+      issuer: "UPenn | 2024",
+      imageUrl: "/images/CodeSoft Certif.png",
+      proofUrl: "https://drive.google.com/file/d/1thxWx5jHpOp5aBkWnZa7ZQ4kNM26aCgy/view",
+      summary: "UI/UX Design, Wireframing, Prototyping, User Research, and Visual Design using Figma.",
+    },
     // {
     //   title: "Robotics: Computational Motion Planning",
     //   issuer: "UPenn | 2024",
     //   imageUrl: "/images/upenn.jpg",
-    //   proofUrl: "https://coursera.org/share/f72546c95773fe47de79922ddf5c4693",
+    //   proofUrl: "https://image2url.com/images/1761580139853-0c9ec924-0637-4e86-9f6c-8a2d92beeef3.png",
     //   summary: "Graph Theory and Computational Logic, MATLAB and Network Routing, Computational Thinking with AI.",
     // },
     // {
