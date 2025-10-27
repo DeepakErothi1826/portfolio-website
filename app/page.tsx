@@ -162,7 +162,15 @@ export default function RotPage() {
     a()
   }, [])
 
-  const certifications = [
+  type CertificationType = {
+    title: string
+    issuer: string
+    imageUrl?: string
+    proofUrl?: string
+    summary?: string
+  }
+
+  const certifications: CertificationType[] = [
     // {
     //   title: "Robotics: Aerial Robotics",
     //   issuer: "UPenn | 2024",
@@ -410,27 +418,49 @@ export default function RotPage() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {certifications.map((c, i) => (
                 <div key={i} className="rounded-xl border border-white/10 p-4 bg-white/5">
-                  <Link
-                    href={c.proofUrl}
-                    target="_blank"
-                    className="group relative block aspect-16/10 overflow-hidden rounded-md"
-                    aria-label={`Open certificate proof: ${c.title}`}
-                  >
-                    <Image
-                      src={c.imageUrl || "/placeholder.svg"}
-                      alt={`${c.title} preview`}
-                      fill
-                      className="object-cover"
-                      priority
-                    />
+                  {c.proofUrl ? (
+                    <Link
+                      href={c.proofUrl}
+                      target="_blank"
+                      className="group relative block aspect-16/10 overflow-hidden rounded-md"
+                      aria-label={`Open certificate proof: ${c.title}`}
+                    >
+                      <Image
+                        src={c.imageUrl || "/placeholder.svg"}
+                        alt={`${c.title} preview`}
+                        fill
+                        className="object-cover"
+                        priority
+                      />
+                      <div
+                        className="absolute right-3 top-3 inline-flex items-center justify-center rounded-full bg-black/70 p-2 text-white
+                                   group-hover:bg-black/80 transition"
+                        aria-hidden="true"
+                      >
+                        <ArrowUpRight size={18} />
+                      </div>
+                    </Link>
+                  ) : (
                     <div
-                      className="absolute right-3 top-3 inline-flex items-center justify-center rounded-full bg-black/70 p-2 text-white
-                                 group-hover:bg-black/80 transition"
+                      className="group relative block aspect-16/10 overflow-hidden rounded-md"
                       aria-hidden="true"
                     >
-                      <ArrowUpRight size={18} />
+                      <Image
+                        src={c.imageUrl || "/placeholder.svg"}
+                        alt={`${c.title} preview`}
+                        fill
+                        className="object-cover"
+                        priority
+                      />
+                      <div
+                        className="absolute right-3 top-3 inline-flex items-center justify-center rounded-full bg-black/70 p-2 text-white
+                                   group-hover:bg-black/80 transition"
+                        aria-hidden="true"
+                      >
+                        <ArrowUpRight size={18} />
+                      </div>
                     </div>
-                  </Link>
+                  )}
                   <div className="mt-3">
                     <h3 className="font-mono font-bold text-lg">{c.title}</h3>
                     <p className="opacity-80 text-base underline">{c.issuer}</p>
