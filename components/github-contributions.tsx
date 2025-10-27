@@ -41,7 +41,7 @@ const THEMES: Record<string, { label: string; palette: string[] }> = {
 }
 
 export default function GitHubContributions({
-  username = "aayushmishramechatronics", 
+  username = "DeepakErothi1826", 
 }: {
   username?: string
 }) {
