@@ -163,27 +163,27 @@ export default function RotPage() {
   }, [])
 
   const certifications = [
-    {
-      title: "Robotics: Aerial Robotics",
-      issuer: "UPenn | 2024",
-      imageUrl: "/images/upenn1.jpg",
-      proofUrl: "https://coursera.org/share/9e3d0e1d3e8d58dc42e731177e6388f1",
-      summary: "MATLAB and Simulation Software, Control System, Mathematical Modeling with Calculus.",
-    },
-    {
-      title: "Robotics: Computational Motion Planning",
-      issuer: "UPenn | 2024",
-      imageUrl: "/images/upenn.jpg",
-      proofUrl: "https://coursera.org/share/f72546c95773fe47de79922ddf5c4693",
-      summary: "Graph Theory and Computational Logic, MATLAB and Network Routing, Computational Thinking with AI.",
-    },
-    {
-      title: "Robotic Process Automation",
-      issuer: "UiPath | 2024",
-      imageUrl: "/images/uipath.jpg",
-      proofUrl: "https://coursera.org/share/f82b4a523d8a2ffdaf25008475f943d1",
-      summary: "UiRPA, Web Scraping and Data Manipulation, UI and UI Components, Test Automation.",
-    },
+    // {
+    //   title: "Robotics: Aerial Robotics",
+    //   issuer: "UPenn | 2024",
+    //   imageUrl: "/images/upenn1.jpg",
+    //   proofUrl: "https://coursera.org/share/9e3d0e1d3e8d58dc42e731177e6388f1",
+    //   summary: "MATLAB and Simulation Software, Control System, Mathematical Modeling with Calculus.",
+    // },
+    // {
+    //   title: "Robotics: Computational Motion Planning",
+    //   issuer: "UPenn | 2024",
+    //   imageUrl: "/images/upenn.jpg",
+    //   proofUrl: "https://coursera.org/share/f72546c95773fe47de79922ddf5c4693",
+    //   summary: "Graph Theory and Computational Logic, MATLAB and Network Routing, Computational Thinking with AI.",
+    // },
+    // {
+    //   title: "Robotic Process Automation",
+    //   issuer: "UiPath | 2024",
+    //   imageUrl: "/images/uipath.jpg",
+    //   proofUrl: "https://coursera.org/share/f82b4a523d8a2ffdaf25008475f943d1",
+    //   summary: "UiRPA, Web Scraping and Data Manipulation, UI and UI Components, Test Automation.",
+    // },
   ]
 
   return (

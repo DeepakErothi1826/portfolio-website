@@ -78,14 +78,14 @@ export default function ExperienceSection() {
       logoSrc: "/Ericson.png",
       title: "Ericson Insurance TPA Pvt. Ltd.",
       subtitle: "Mobile Application Developer",
-      dates: " Jun 2024 - May 2025",
+      dates: "  Aug 2025 - Sep 2025",
     },
     {
       logoAlt: "Shunayaverse",
       logoSrc: "/Shunayaverse.png",
       title: "Shunayaverse",
       subtitle: "Full-Stack Developer",
-      dates: " Jun 2024 - May 2025",
+      dates: "  Jun 2024 - May 2025",
     },
   {
       logoAlt: "Meeraai Tech Solutions",
@@ -96,7 +96,7 @@ export default function ExperienceSection() {
     },
     {
       logoAlt: "Oil and Natural Gas Corporation logo",
-      logoSrc: "/Codesoft.png",
+      logoSrc: "/CodeSoft.jpg",
       title: "Codesoft",
       subtitle: "UI/UX Designer Internship",
       dates: "Aug 2023 - Nov 2023",
