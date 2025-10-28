@@ -371,7 +371,7 @@ const projectsList: ProjectType[] = [
               setDisplayTab("blogs")
             }}
           >
-            Blogs
+            Contact
             <div className={styles.hoverThing} />
           </div>
         </div>
