@@ -334,7 +334,7 @@ const projectsList: ProjectType[] = [
         </div>
 
         <div className={styles.bio}>
-          <p className="font-mono tracking-tighter underline leading-7 font-light text-2xl">📍Mumbai, Maharashtra</p>
+          <p className="font-mono tracking-tighter underline leading-7 font-light text-2xl">📍Mumbai,Maharashtra</p>
         </div>
 
         <div className={styles.tabsHolder}>
@@ -525,7 +525,7 @@ const projectsList: ProjectType[] = [
         )}
  <section
           id="contact"
-          className="mt-20 mb-20 w-[90%] md:w-[70%] lg:w-[50%] mx-auto"
+          className="mt-20 mb-20 w-[90%] md:w-[70%] lg:w-[50%] mx-auto transition-all duration-300"
           onMouseOver={() => setMouseOver(true)}
           onMouseLeave={() => setMouseOver(false)}
           style={{
@@ -536,8 +536,8 @@ const projectsList: ProjectType[] = [
               : "0 0 10px rgba(255,255,255,0.05)",
           }}
         >
-          <div className="bg-white/5 dark:bg-black/20 border border-white/10 rounded-xl p-8">
-            <h2 className="text-3xl font-mono font-semibold text-center underline mb-6">
+          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <h2 className="text-3xl font-semibold text-center underline mb-6">
               Get In Touch
             </h2>
 
@@ -551,33 +551,33 @@ const projectsList: ProjectType[] = [
                 type="text"
                 placeholder="Enter your name"
                 required
-                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none font-mono"
+                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none"
               />
               <input
                 name="user_email"
                 type="email"
                 placeholder="Enter your email"
                 required
-                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none font-mono"
+                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none"
               />
               <textarea
                 name="message"
                 placeholder="Write your message..."
                 rows={4}
                 required
-                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none font-mono resize-none"
+                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none resize-none"
               ></textarea>
               <button
                 type="submit"
-                className="mt-4 py-2 px-6 rounded-md bg-white text-black font-mono font-semibold hover:bg-gray-200 transition"
+                className="mt-4 py-2 px-6 rounded-md bg-white text-black font-semibold hover:bg-gray-200 transition"
               >
                 {buttonText}
               </button>
             </form>
           </div>
         </section>
-
-        <div className={styles.pageFooter}>
+{/* {styles.pageFooter} */}
+        <div className ="mt-16 flex flex-col items-center gap-2 border-t border-white/10 pt-4 text-sm text-muted-foreground">
           <Link href="/resume">
             <p className={`flex items-center gap-[5px] underline font-mono font-bold text-2xl leading-[0.55rem] ${styles.resumeBtn}`}>
               Resume <ArrowUpRight className="w-auto h-[26px]" size={16} />
