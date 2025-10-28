@@ -525,7 +525,7 @@ const projectsList: ProjectType[] = [
         )}
  <section
           id="contact"
-          className="mt-20 mb-20 w-[90%] md:w-[70%] lg:w-[70%] mx-auto transition-all duration-300"
+          className="mt-20 mb-20 w-[100%] md:w-[70%] lg:w-[70%] mx-auto transition-all duration-300"
           onMouseOver={() => setMouseOver(true)}
           onMouseLeave={() => setMouseOver(false)}
           style={{
