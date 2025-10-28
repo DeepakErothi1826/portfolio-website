@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Providers } from "./providers"
 
@@ -24,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased" suppressHydrationWarning>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
   )
