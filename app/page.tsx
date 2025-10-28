@@ -1,5 +1,6 @@
 "use client"
 import styles from "./root.module.css"
+import emailjs from "@emailjs/browser";
 import Image from "next/image"
 import {
   ArrowUpRight,
@@ -14,21 +15,50 @@ import {
   Sun,
   Briefcase,
   Award,
-} from "lucide-react"
-import { Marquee } from "@/components/magicui/marquee"
-import { useTheme } from "next-themes"
-import ProjectCard from "@/components/projectCard/projectCard"
-import type { BlogType, ProjectType } from "@/lib/types"
-import { motion, useScroll, useMotionValueEvent } from "framer-motion"
-import DefaultBlogCard from "@/components/blogs/blogCards"
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import cn from "classnames"
-import GitHubContributions from "@/components/github-contributions"
-import ExperienceSection from "@/components/experience-section"
+}from "lucide-react";
+import { Marquee } from "@/components/magicui/marquee";
+import { useTheme } from "next-themes";
+import ProjectCard from "@/components/projectCard/projectCard";
+import type { BlogType, ProjectType } from "@/lib/types";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import DefaultBlogCard from "@/components/blogs/blogCards";
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+import toast from "react-hot-toast";
+import cn from "classnames";
+import GitHubContributions from "@/components/github-contributions";
+import ExperienceSection from "@/components/experience-section";
+
+const EMAIL_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const EMAIL_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+const EMAIL_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 export default function RotPage() {
-  const projectsList: ProjectType[] = [
+  const form = useRef<HTMLFormElement>(null);
+  const [buttonText, setButtonText] = useState("Send");
+  const [mouseOver, setMouseOver] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setButtonText("Sending...");
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, form.current, EMAIL_PUBLIC_KEY)
+      .then(
+        () => {
+          setButtonText("Sent");
+          toast.success("Message Sent Successfully!");
+          form.current?.reset();
+        },
+        (error: any) => {
+          console.error(error);
+          setButtonText("Send");
+          toast.error("Message Failed to Send!");
+        }
+      );
+  };
+const projectsList: ProjectType[] = [
     {
       name: "Smoke&Jones Restaurant Mobile Appication",
       imageUrl:
@@ -214,14 +244,14 @@ export default function RotPage() {
         className={cn(
           "z-[-1]",
           "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(var(--fgColor)_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(var(--fgColor)_1px,transparent_1px)]",
-          "[opacity:0.25]",
+          "bg-size-[20px_20px]",
+          "bg-[radial-gradient(var(--fgColor)_1px,transparent_1px)]",
+          "dark:bg-[radial-gradient(var(--fgColor)_1px,transparent_1px)]",
+          "opacity: 0.25;",
           "transition-colors duration-400",
         )}
       />
-      <div className="z-[-1] pointer-events-none absolute inset-0 flex items-center justify-center bg-[var(--bgColor)] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-[var(--bgColor)] transition-colors duration-400"></div>
+      <div className="z-[-1] pointer-events-none absolute inset-0 flex items-center justify-center bg-(--bgColor) mask-[radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-(--bgColor) transition-colors duration-400"></div>
 
       <div className={styles.detailsHolder}>
         <div className={styles.heroSection}>
@@ -493,6 +523,59 @@ export default function RotPage() {
             </div>
           </>
         )}
+ <section
+          id="contact"
+          className="mt-20 mb-20 w-[90%] md:w-[70%] lg:w-[50%] mx-auto"
+          onMouseOver={() => setMouseOver(true)}
+          onMouseLeave={() => setMouseOver(false)}
+          style={{
+            borderRadius: mouseOver ? "0" : "30px",
+            transform: mouseOver ? "scale(1.02)" : "scale(1)",
+            boxShadow: mouseOver
+              ? "0 0 25px rgba(255,255,255,0.15)"
+              : "0 0 10px rgba(255,255,255,0.05)",
+          }}
+        >
+          <div className="bg-white/5 dark:bg-black/20 border border-white/10 rounded-xl p-8">
+            <h2 className="text-3xl font-mono font-semibold text-center underline mb-6">
+              Get In Touch
+            </h2>
+
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col gap-4 text-left"
+            >
+              <input
+                name="user_name"
+                type="text"
+                placeholder="Enter your name"
+                required
+                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none font-mono"
+              />
+              <input
+                name="user_email"
+                type="email"
+                placeholder="Enter your email"
+                required
+                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none font-mono"
+              />
+              <textarea
+                name="message"
+                placeholder="Write your message..."
+                rows={4}
+                required
+                className="w-full rounded-md px-3 py-2 bg-transparent border border-white/20 focus:border-white/40 outline-none font-mono resize-none"
+              ></textarea>
+              <button
+                type="submit"
+                className="mt-4 py-2 px-6 rounded-md bg-white text-black font-mono font-semibold hover:bg-gray-200 transition"
+              >
+                {buttonText}
+              </button>
+            </form>
+          </div>
+        </section>
 
         <div className={styles.pageFooter}>
           <Link href="/resume">
@@ -508,3 +591,4 @@ export default function RotPage() {
     </div>
   )
 }
+

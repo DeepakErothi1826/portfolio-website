@@ -66,8 +66,8 @@ export default function DefaultBlogCard({ blogData }: { blogData: BlogType }) {
     return (<div className={styles.main}>
 
         <div className={styles.mainContent}>
-            <div className="flex gap-[10px] font-sans font-semibold text-sm">
-                <Image className="h-[40px] w-[40px] rounded-[50%]" src={`https://res.cloudinary.com/dytynwrxu/image/upload/profilePics/${blogData.ownerId}.jpg`} width={40} height={40} alt="" unoptimized />
+            <div className="flex gap-2.5 font-sans font-semibold text-sm">
+                <Image className="h-10 w-10 rounded-[50%]" src={`https://res.cloudinary.com/dytynwrxu/image/upload/profilePics/${blogData.ownerId}.jpg`} width={40} height={40} alt="" unoptimized />
                 <div className={styles.userDetails}>
                     <Link className={styles.name} href={`https://bugspot.in/profile/${blogData.ownerId}`} target="_blank">{blogData.ownerName}</Link>
                     <p className="font-mono">{formatTimestampToTwitterStyle(blogData.updatedAt)}</p>
