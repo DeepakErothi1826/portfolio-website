@@ -1,15 +1,21 @@
 .main {
-  min-height: 100vh;
-  position: relative;
-  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh; /* ✅ use min-height instead */
+  overflow-x: hidden;
+  overflow-y: auto; /* ✅ allow vertical scroll */
+  scroll-behavior: smooth;
 }
 
 .detailsHolder {
-  max-width: 650px;
-  margin: 0px auto;
-  padding: 30px 0px;
-  padding-bottom: 40px;
-  position: relative;
+ width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: visible;
 }
 
 .heroSection {
