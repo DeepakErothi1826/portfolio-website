@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  min-height: 100vh; /* ✅ use min-height instead */
+  min-height: 100vh;  
   overflow-x: hidden;
-  overflow-y: auto; /* ✅ allow vertical scroll */
+  overflow-y: auto;  
   scroll-behavior: smooth;
 }
 
