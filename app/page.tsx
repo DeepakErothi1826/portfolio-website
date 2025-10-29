@@ -584,7 +584,7 @@ const projectsList: ProjectType[] = [
             </p>
           </Link>
           <p className="text-center opacity-[0.7] max-w-[580px] font-mono font-semibold text-base tracking-tight">
-            Built by Deepak Erati | Last Updated: August 31, 2025.
+            Built by Deepak Erati | Last Updated: August 29, 2025.
           </p>
         </div>
       </div>
