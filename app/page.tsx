@@ -60,6 +60,17 @@ export default function RotPage() {
   };
 const projectsList: ProjectType[] = [
     {
+      name: "Cinematrixx",
+      imageUrl:
+        "https://classical-bronze-lk9pbaispl.edgeone.app/img.png",
+      description:
+        "Cinematrixx is a movie discovery web app where users can explore trending, top-rated, and upcoming films with detailed overviews, trailers, genres, and cast information.",
+      liveLink: "https://deepakerothi1826.github.io/Cinematrixx/",
+      work: "Solo Work",
+      status: "Active",
+       techStack: ["React", "TypeScript", "TailwindCSS"]
+    },
+    {
       name: "Smoke&Jones Restaurant Mobile Appication",
       imageUrl:
         "https://image2url.com/images/1761475063565-ac287aae-0d25-4f73-acfa-905124af7aa2.png",
@@ -78,7 +89,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/cblPAFb9yEOMISie1zJDjf/Untitled?node-id=0-1&fuid=1412720828761625255",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS"]
+       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
     },
         {
       name: "Ericson Mobile Application UI/UX Design",
@@ -88,7 +99,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/tuFr9b3Qmnc8hRGeLObBfh/Untitled?node-id=1-3&starting-point-node-id=9%3A2",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS"]
+       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
     },
     {
       name: "Login page sign-up flow Ui/Ux",
@@ -98,7 +109,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/bk4wze5dJnU1tVWHKaKqCx/Mobile-App-Signup-Flow?node-id=7-64&p=f&t=W9XrZpaYsE2NIzgP-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=7%3A64",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS"]
+       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
     },
     {
       name: "MarvelVerse Cinematic Hero Showcase",
@@ -109,7 +120,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/Kgyl7WjNQudULBvdlEssWr/Untitled?node-id=3-2&starting-point-node-id=3%3A2&scaling=scale-down&content-scaling=fixed",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS"]
+       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
     },
   ]
 
