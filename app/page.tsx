@@ -62,7 +62,7 @@ const projectsList: ProjectType[] = [
     {
       name: "Cinematrixx",
       imageUrl:
-        "https://classical-bronze-lk9pbaispl.edgeone.app/img.png",
+        "https://arch.git4share.bond/k/zip/uKr1zKPzLBKTXz93YZT2YqVL/file.zip",
       description:
         "Cinematrixx is a movie discovery web app where users can explore trending, top-rated, and upcoming films with detailed overviews, trailers, genres, and cast information.",
       liveLink: "https://deepakerothi1826.github.io/Cinematrixx/",
