@@ -1,7 +1,8 @@
 "use client"
-import styles from "./root.module.css"
+import styles from "./root.module.css";
 import emailjs from "@emailjs/browser";
-import Image from "next/image"
+import Image from "next/image";
+
 import {
   ArrowUpRight,
   ChevronLeft,
@@ -15,7 +16,7 @@ import {
   Sun,
   Briefcase,
   Award,
-}from "lucide-react";
+} from "lucide-react";
 import { Marquee } from "@/components/magicui/marquee";
 import { useTheme } from "next-themes";
 import ProjectCard from "@/components/projectCard/projectCard";
@@ -58,7 +59,7 @@ export default function RotPage() {
         }
       );
   };
-const projectsList: ProjectType[] = [
+  const projectsList: ProjectType[] = [
     {
       name: "Cinematrixx",
       imageUrl:
@@ -68,7 +69,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://deepakerothi1826.github.io/Cinematrixx/",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS"]
+      techStack: ["React", "TypeScript", "TailwindCSS"]
     },
     {
       name: "Smoke&Jones Restaurant Mobile Appication",
@@ -79,7 +80,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/Ttpb8odZezsB2TO4H4JQCj/Restaurant-menu?node-id=70-554&starting-point-node-id=48%3A300",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS"]
+      techStack: ["React", "TypeScript", "TailwindCSS"]
     },
     {
       name: "FruityBuss Parallax Experience",
@@ -89,9 +90,9 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/cblPAFb9yEOMISie1zJDjf/Untitled?node-id=0-1&fuid=1412720828761625255",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
     },
-        {
+    {
       name: "Ericson Mobile Application UI/UX Design",
       imageUrl: "https://image2url.com/images/1761475416834-53186d5c-a7ee-4c9d-b743-8376f9593954.png",
       description:
@@ -99,7 +100,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/tuFr9b3Qmnc8hRGeLObBfh/Untitled?node-id=1-3&starting-point-node-id=9%3A2",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
     },
     {
       name: "Login page sign-up flow Ui/Ux",
@@ -109,7 +110,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/bk4wze5dJnU1tVWHKaKqCx/Mobile-App-Signup-Flow?node-id=7-64&p=f&t=W9XrZpaYsE2NIzgP-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=7%3A64",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
     },
     {
       name: "MarvelVerse Cinematic Hero Showcase",
@@ -120,7 +121,7 @@ const projectsList: ProjectType[] = [
       liveLink: "https://www.figma.com/proto/Kgyl7WjNQudULBvdlEssWr/Untitled?node-id=3-2&starting-point-node-id=3%3A2&scaling=scale-down&content-scaling=fixed",
       work: "Solo Work",
       status: "Active",
-       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
     },
   ]
 
@@ -212,14 +213,14 @@ const projectsList: ProjectType[] = [
   }
 
   const certifications: CertificationType[] = [
-       {
+    {
       title: "Ericson : Mobile Application Developer",
       issuer: "UPenn | 2024",
       imageUrl: "/images/Ericson Certif.jpg",
       proofUrl: "https://image2url.com/images/1761580990285-1c0e6b44-1f99-4e7d-ba9d-4736fad2c039.jpg",
       summary: "Mobile Application Development, UI Implementation, API Integration, and Performance Optimization for Android Applications.",
     },
-       {
+    {
       title: "Shunayaverse : Full-Stack Developer",
       issuer: "UPenn | 2024",
       imageUrl: "/images/Shunayaverse Experience.png",
@@ -281,21 +282,21 @@ const projectsList: ProjectType[] = [
             }}
           >
             <motion.div className="relative h-full w-full flex items-center justify-end px-[15px]">
-                <motion.img
-                  // src="https://image2url.com/images/1761469062549-cafd14bb-7bde-41e0-8d0f-08288f537421.jpg"
-                  src="https://image2url.com/images/1761469279402-9e0ba78f-50e9-4919-a49d-020336fe14ed.png"
-                  alt="Profile photo of Aayush Mishra"
-                  initial={{ height: 200, width: 200, borderRadius: 9999, margin: "0px auto", position: "static" }}
-                  animate={isScrolled ? "scrolled" : "normal"}
-                  variants={{
-                    normal: { height: 200, width: 200, borderRadius: 9999 },
-                    scrolled: { height: 40, width: 40, borderRadius: 9999, position: "absolute", top: 10, left: 10 },
-                  }}
-                  whileHover={{ boxShadow: "0 0 30px 2px rgba(255, 255, 255, 0.5)" }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  style={{ objectFit: "cover", transition: "box-shadow 0.1s" }}
-                />
-              </motion.div>
+              <motion.img
+                // src="https://image2url.com/images/1761469062549-cafd14bb-7bde-41e0-8d0f-08288f537421.jpg"
+                src="https://image2url.com/images/1761469279402-9e0ba78f-50e9-4919-a49d-020336fe14ed.png"
+                alt="Profile photo of Aayush Mishra"
+                initial={{ height: 200, width: 200, borderRadius: 9999, margin: "0px auto", position: "static" }}
+                animate={isScrolled ? "scrolled" : "normal"}
+                variants={{
+                  normal: { height: 200, width: 200, borderRadius: 9999 },
+                  scrolled: { height: 40, width: 40, borderRadius: 9999, position: "absolute", top: 10, left: 10 },
+                }}
+                whileHover={{ boxShadow: "0 0 30px 2px rgba(255, 255, 255, 0.5)" }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                style={{ objectFit: "cover", transition: "box-shadow 0.1s" }}
+              />
+            </motion.div>
           </motion.div>
 
           <div className="flex flex-col items-center gap-0.5">
@@ -432,28 +433,50 @@ const projectsList: ProjectType[] = [
             </div>
 
             <div className={styles.techStack}>
-              <h1 className="font-mono font-semibold text-4xl">My Tech-Stack</h1>
+              <h1 className="font-mono font-semibold text-4xl mb-6">My Tech-Stack</h1>
 
               <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-                <Marquee pauseOnHover className="[--duration:35s]">
+                {/* Marquee 1 */}
+                <Marquee pauseOnHover>
                   {techStack1.map((tech, index) => (
-                    <div key={index} className={styles.techStackItem}>
-                      <Image alt="" src={tech.iconUrl || "/placeholder.svg"} height={20} width={20} unoptimized />
-                      <p>{tech.name}</p>
-                    </div>
-                  ))}
-                </Marquee>
-                <Marquee reverse pauseOnHover className="[--duration:35s]">
-                  {techStack2.map((tech, index) => (
-                    <div key={index} className={styles.techStackItem}>
-                      <Image alt="" src={tech.iconUrl || "/placeholder.svg"} height={20} width={20} unoptimized />
-                      <p>{tech.name}</p>
+                    <div
+                      key={index}
+                      className="flex flex-col items-center justify-center mx-4"
+                    >
+                      <Image
+                        alt={tech.name}
+                        src={tech.iconUrl || "/placeholder.svg"}
+                        height={40}
+                        width={40}
+                        unoptimized
+                      />
+                      <p className="mt-2 text-sm text-center">{tech.name}</p>
                     </div>
                   ))}
                 </Marquee>
 
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r from-(--bgColor)"></div>
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-(--bgColor)"></div>
+                {/* Marquee 2 (reverse) */}
+                <Marquee reverse pauseOnHover>
+                  {techStack2.map((tech, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center justify-center mx-4"
+                    >
+                      <Image
+                        alt={tech.name}
+                        src={tech.iconUrl || "/placeholder.svg"}
+                        height={40}
+                        width={40}
+                        unoptimized
+                      />
+                      <p className="mt-2 text-sm text-center">{tech.name}</p>
+                    </div>
+                  ))}
+                </Marquee>
+
+                {/* Gradient overlays */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white to-transparent dark:from-black" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white to-transparent dark:from-black" />
               </div>
             </div>
           </>
@@ -534,7 +557,7 @@ const projectsList: ProjectType[] = [
             </div>
           </>
         )}
- <section
+        <section
           id="contact"
           className="mt-20 mb-20 w-[100%] md:w-[70%] lg:w-[70%] mx-auto transition-all duration-300"
           onMouseOver={() => setMouseOver(true)}
@@ -587,8 +610,8 @@ const projectsList: ProjectType[] = [
             </form>
           </div>
         </section>
-{/* {styles.pageFooter} */}
-        <div className ="mt-16 flex flex-col items-center gap-2 border-t border-white/10 pt-4 text-sm text-muted-foreground">
+        {/* {styles.pageFooter} */}
+        <div className="mt-16 flex flex-col items-center gap-2 border-t border-white/10 pt-4 text-sm text-muted-foreground">
           <Link href="/resume">
             <p className={`flex items-center gap-[5px] underline font-mono font-bold text-2xl leading-[0.55rem] ${styles.resumeBtn}`}>
               Resume <ArrowUpRight className="w-auto h-[26px]" size={16} />
