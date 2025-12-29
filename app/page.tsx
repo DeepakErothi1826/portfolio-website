@@ -60,10 +60,21 @@ export default function RotPage() {
       );
   };
   const projectsList: ProjectType[] = [
+     {
+      name: "Portfolio",
+      imageUrl:
+        "https://img.sanishtech.com/u/a4048f64695fce7ab9c349f44dcd7749.png",
+      description:
+        "A modern portfolio project built with TypeScript, React.js, and Next.js, showcasing clean architecture, reusable components, and performance-focused development. Designed to highlight best practices in modern frontend engineering.",
+      liveLink: "https://portfolio-website-xi-blond-47.vercel.app/",
+      work: "Solo Work",
+      status: "Active",
+      techStack: ["React", "TypeScript", "TailwindCSS"]
+    },
     {
       name: "Cinematrixx",
       imageUrl:
-        "https://arch.git4share.bond/k/zip/uKr1zKPzLBKTXz93YZT2YqVL/file.zip",
+        "https://img.sanishtech.com/u/e7baf94d9bf34507260d617e3d66eefc.png",
       description:
         "Cinematrixx is a movie discovery web app where users can explore trending, top-rated, and upcoming films with detailed overviews, trailers, genres, and cast information.",
       liveLink: "https://deepakerothi1826.github.io/Cinematrixx/",
@@ -125,7 +136,7 @@ export default function RotPage() {
     },
   ]
 
-  const [projectDisplayList, setProjectDisplayList] = useState(projectsList.slice(0, 3))
+  const [projectDisplayList, setProjectDisplayList] = useState(projectsList.slice(0, 4))
   const [showMoreProject, setShowMoreProject] = useState("less")
 
   const techStack1 = [
@@ -143,14 +154,14 @@ export default function RotPage() {
     },
     {
       name: "PostgreSQL",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763871/psotgresql_ggzxtu.png",
+      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763871/postgresql_ggzxtu.png",
     },
     {
       name: "Supabase",
       iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763871/supabase_eban6b.png",
     },
     {
-      name: "shadCn",
+      name: "shadcn/ui",
       iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749765234/shadcn_xvjz01.png",
     },
   ]
@@ -234,20 +245,6 @@ export default function RotPage() {
       proofUrl: "https://drive.google.com/file/d/1thxWx5jHpOp5aBkWnZa7ZQ4kNM26aCgy/view",
       summary: "UI/UX Design, Wireframing, Prototyping, User Research, and Visual Design using Figma.",
     },
-    // {
-    //   title: "Robotics: Computational Motion Planning",
-    //   issuer: "UPenn | 2024",
-    //   imageUrl: "/images/upenn.jpg",
-    //   proofUrl: "https://image2url.com/images/1761580139853-0c9ec924-0637-4e86-9f6c-8a2d92beeef3.png",
-    //   summary: "Graph Theory and Computational Logic, MATLAB and Network Routing, Computational Thinking with AI.",
-    // },
-    // {
-    //   title: "Robotic Process Automation",
-    //   issuer: "UiPath | 2024",
-    //   imageUrl: "/images/uipath.jpg",
-    //   proofUrl: "https://coursera.org/share/f82b4a523d8a2ffdaf25008475f943d1",
-    //   summary: "UiRPA, Web Scraping and Data Manipulation, UI and UI Components, Test Automation.",
-    // },
   ]
 
   return (
