@@ -2,6 +2,8 @@
 import styles from "./root.module.css";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
+import portfolioImg from "@/assets/portfolio.png";
+import movie from "@/assets/movie website.png";
 
 import {
   ArrowUpRight,
@@ -62,8 +64,7 @@ export default function RotPage() {
   const projectsList: ProjectType[] = [
      {
       name: "Portfolio",
-      imageUrl:
-        "https://img.sanishtech.com/u/a4048f64695fce7ab9c349f44dcd7749.png",
+       imageUrl: portfolioImg.src,
       description:
         "A modern portfolio project built with TypeScript, React.js, and Next.js, showcasing clean architecture, reusable components, and performance-focused development. Designed to highlight best practices in modern frontend engineering.",
       liveLink: "https://portfolio-website-xi-blond-47.vercel.app/",
@@ -73,8 +74,7 @@ export default function RotPage() {
     },
     {
       name: "Cinematrixx",
-      imageUrl:
-        "https://img.sanishtech.com/u/e7baf94d9bf34507260d617e3d66eefc.png",
+      imageUrl: movie.src,
       description:
         "Cinematrixx is a movie discovery web app where users can explore trending, top-rated, and upcoming films with detailed overviews, trailers, genres, and cast information.",
       liveLink: "https://deepakerothi1826.github.io/Cinematrixx/",
