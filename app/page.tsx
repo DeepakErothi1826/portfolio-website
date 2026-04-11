@@ -404,7 +404,7 @@ export default function RotPage() {
           <>
             <div className={styles.projectsSection}>
               {/* Move GitHub contributions above the heading as requested */}
-              <GitHubContributions username="https://github.com/DeepakErothi1826" />
+              <GitHubContributions username="DeepakErothi1826" />
 
               <h1 className="font-mono font-semibold underline leading-10 text-3xl">Projects</h1>
 
