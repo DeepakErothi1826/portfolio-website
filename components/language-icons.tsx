@@ -77,6 +77,62 @@ function PythonIcon(props?: { size?: number }): ReactElement {
     </svg>
   )
 }
+function PostgreSQLIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="PostgreSQL">
+      <rect width="48" height="48" rx="8" fill="#336791" />
+      <path d="M24 12c-2 0-4 1-5 3l-3 8c-1 2-1 4-1 6 0 5 3 9 8 9h2v-4c0-2-1-3-3-3h-1v-3h3c3 0 5-2 5-5s-2-6-5-6v-5zm-2 6c-1 0-2-1-2-2s1-2 2-2v4z" fill="white" />
+    </svg>
+  )
+}
+function GitIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Git">
+      <circle cx="24" cy="24" r="20" fill="#F05032" />
+      <circle cx="18" cy="18" r="4" fill="white" />
+      <circle cx="30" cy="18" r="4" fill="white" />
+      <circle cx="24" cy="30" r="4" fill="white" />
+    </svg>
+  )
+}
+function ReactNativeIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="React Native">
+      <rect width="48" height="48" rx="10" fill="#61DAFB" />
+      <path d="M12 24c0-2 1-4 3-5-1-2-1-4 1-6 1-1 3 0 4 1 1 1 2 2 2 4 0 1 0 2-1 3-2 1-3 3-3 5 0 3 2 5 5 5 3 0 5-2 5-5 0-1 0-2-1-3v-1c1-1 2-3 1-5-1-2-2-3-4-3-3 0-5 3-5 6 0 3 2 6 5 6 2 0 4-1 5-3 1 2 1 4-1 5-1 1-3 1-4 0-1-1-1-2-1-3h-2c0 3 2 6 5 6 3 0 5-3 5-6 0-3-2-5-5-5-1 0-2 0-3 1-2-1-3-2-3-4z" fill="#222" />
+    </svg>
+  )
+}
+function ShadcnIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="shadcn/ui">
+      <rect width="48" height="48" rx="8" fill="#000" />
+      <path d="M24 12L12 24h12v12l12-12H24V12z" fill="white" />
+    </svg>
+  )
+}
+function RadixIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Radix UI">
+      <rect width="48" height="48" rx="8" fill="#000" />
+      <circle cx="24" cy="24" r="10" fill="#fff" />
+    </svg>
+  )
+}
+function FastAPIcon(props?: { size?: number }): ReactElement {
+  const { size = 16 } = props || {}
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="FastAPI">
+      <rect width="48" height="48" rx="8" fill="#009688" />
+      <path d="M12 16h8v4h-8v-4zm0 8h8v4h-8v-4zm12-8h8v12h-8v-12zm0 16h8v4h-8v-4z" fill="white" />
+    </svg>
+  )
+}
 
 const registry: Record<string, (p?: { size?: number }) => ReactElement> = {
   "next.js": NextJSIcon,
@@ -92,6 +148,16 @@ const registry: Record<string, (p?: { size?: number }) => ReactElement> = {
   authjs: AuthJSIcon,
   groq: GroqIcon,
   python: PythonIcon,
+  postgresql: PostgreSQLIcon,
+  "postgres sql": PostgreSQLIcon,
+  git: GitIcon,
+  "react native": ReactNativeIcon,
+  reactnative: ReactNativeIcon,
+  "shadcn/ui": ShadcnIcon,
+  shadcn: ShadcnIcon,
+  "radix ui": RadixIcon,
+  radix: RadixIcon,
+  fastapi: FastAPIcon,
 }
 
 export function TechIcon({ name, size = 16, className, title }: Props) {

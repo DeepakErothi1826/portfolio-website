@@ -31,6 +31,7 @@ import toast from "react-hot-toast";
 import cn from "classnames";
 import GitHubContributions from "@/components/github-contributions";
 import ExperienceSection from "@/components/experience-section";
+import { TechIcon } from "@/components/language-icons";
 
 const EMAIL_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 const EMAIL_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
@@ -62,9 +63,59 @@ export default function RotPage() {
       );
   };
   const projectsList: ProjectType[] = [
-     {
+    {
+      name: "MOC Cafe  Website Project",
+      imageUrl: "/MOC_Cafe.png",
+      description:
+        "I designed and developed the MOC Cafe website as a freelancing project to create a visually appealing and engaging online presence. The website highlights the cafe's menu, ambiance, and brand identity with a modern and responsive design. The focus was on delivering a smooth user experience, easy navigation, and fast performance across all devices.",
+      liveLink: "https://moc-cafe.vercel.app/",
+      work: "Solo Work",
+      status: "Active",
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3d animation"]
+    },
+    {
+      name: "Anna Idli Restaurant  Website Project",
+      imageUrl: "/Anna - Idli.png",
+      description:
+        "I developed a modern and user-friendly website for Anna Idli Restaurant as a freelancing project. The goal was to create an appealing online presence that showcases the menu, highlights the brand, and makes it easy for customers to explore offerings. The design focuses on simplicity, responsiveness, and a smooth user experience across all devices.",
+      liveLink: "https://anna-idli-resturant.vercel.app/",
+      work: "Solo Work",
+      status: "Active",
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3d animation"]
+    },
+    {
+      name: "Mahima Dental Website Project",
+      imageUrl: "/dental thumnail.png",
+      description:
+        "I designed and developed the MOC Cafe website as a freelancing project to create a visually appealing and engaging online presence. The website highlights the cafe’s menu, ambiance, and brand identity with a modern and responsive design. The focus was on delivering a smooth user experience, easy navigation, and fast performance across all devices.",
+      liveLink: "https://moc-cafe.vercel.app/",
+      work: "Solo Work",
+      status: "Active",
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3d animation"]
+    },
+    {
+      name: "Anna Idli Restaurant  Website Project",
+      imageUrl: portfolioImg.src,
+      description:
+        "I developed a modern and user-friendly website for Anna Idli Restaurant as a freelancing project. The goal was to create an appealing online presence that showcases the menu, highlights the brand, and makes it easy for customers to explore offerings. The design focuses on simplicity, responsiveness, and a smooth user experience across all devices.",
+      liveLink: "https://anna-idli-resturant.vercel.app/",
+      work: "Solo Work",
+      status: "Active",
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3d animation"]
+    },
+    {
+      name: "Mahima Dental Website Project",
+      imageUrl: portfolioImg.src,
+      description:
+        "I designed and developed the Mahima Dental website for a client to establish a strong and trustworthy online presence. The project focused on creating a clean, modern, and user-friendly interface that highlights dental services, builds patient confidence, and ensures easy navigation across all devices. Special attention was given to responsive design, fast performance, and clear content structure to enhance user experience and accessibility.",
+      liveLink: "https://dental-clinic-wshy.vercel.app/",
+      work: "Solo Work",
+      status: "Active",
+      techStack: ["React", "TypeScript", "TailwindCSS"]
+    },
+    {
       name: "Portfolio",
-       imageUrl: portfolioImg.src,
+      imageUrl: portfolioImg.src,
       description:
         "A modern portfolio project built with TypeScript, React.js, and Next.js, showcasing clean architecture, reusable components, and performance-focused development. Designed to highlight best practices in modern frontend engineering.",
       liveLink: "https://portfolio-website-xi-blond-47.vercel.app/",
@@ -140,56 +191,20 @@ export default function RotPage() {
   const [showMoreProject, setShowMoreProject] = useState("less")
 
   const techStack1 = [
-    {
-      name: "Next.js",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749764539/nextjs_gyqxdo.png",
-    },
-    {
-      name: "Cloudinary",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763872/cloudinary_jcjz1e.webp",
-    },
-    {
-      name: "Auth.js",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763872/authjs_g9rfwm.webp",
-    },
-    {
-      name: "PostgreSQL",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763871/postgresql_ggzxtu.png",
-    },
-    {
-      name: "Supabase",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763871/supabase_eban6b.png",
-    },
-    {
-      name: "shadcn/ui",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749765234/shadcn_xvjz01.png",
-    },
+    { name: "Next.js" },
+    { name: "Cloudinary" },
+    { name: "Auth.js" },
+    { name: "PostgreSQL" },
+    { name: "Supabase" },
+    { name: "shadcn/ui" },
   ]
   const techStack2 = [
-    {
-      name: "React Native",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763871/react_fxopt7.png",
-    },
-    {
-      name: "Python",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763871/python_gtxoax.webp",
-    },
-    {
-      name: "MongoDB",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763870/mongodb_msjbae.svg",
-    },
-    {
-      name: "FastAPI",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749763870/FastAPI_prcozs.png",
-    },
-    {
-      name: "Git",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749764943/gitlogo_ozinof.png",
-    },
-    {
-      name: "Radix UI",
-      iconUrl: "https://res.cloudinary.com/dbb7pkwdv/image/upload/v1749765176/radixui_nmbq9s.png",
-    },
+    { name: "React Native" },
+    { name: "Python" },
+    { name: "MongoDB" },
+    { name: "FastAPI" },
+    { name: "Git" },
+    { name: "Radix UI" },
   ]
 
   const { theme: currentTheme, setTheme: setCurrentTheme } = useTheme()
@@ -440,13 +455,7 @@ export default function RotPage() {
                       key={index}
                       className="flex flex-col items-center justify-center mx-4"
                     >
-                      <Image
-                        alt={tech.name}
-                        src={tech.iconUrl || "/placeholder.svg"}
-                        height={40}
-                        width={40}
-                        unoptimized
-                      />
+                      <TechIcon name={tech.name} size={40} />
                       <p className="mt-2 text-sm text-center">{tech.name}</p>
                     </div>
                   ))}
@@ -459,13 +468,7 @@ export default function RotPage() {
                       key={index}
                       className="flex flex-col items-center justify-center mx-4"
                     >
-                      <Image
-                        alt={tech.name}
-                        src={tech.iconUrl || "/placeholder.svg"}
-                        height={40}
-                        width={40}
-                        unoptimized
-                      />
+                      <TechIcon name={tech.name} size={40} />
                       <p className="mt-2 text-sm text-center">{tech.name}</p>
                     </div>
                   ))}
