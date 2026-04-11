@@ -88,30 +88,10 @@ export default function RotPage() {
       imageUrl: "/dental thumnail.png",
       description:
         "I designed and developed the MOC Cafe website as a freelancing project to create a visually appealing and engaging online presence. The website highlights the cafe’s menu, ambiance, and brand identity with a modern and responsive design. The focus was on delivering a smooth user experience, easy navigation, and fast performance across all devices.",
-      liveLink: "https://moc-cafe.vercel.app/",
-      work: "Solo Work",
-      status: "Active",
-      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3d animation"]
-    },
-    {
-      name: "Anna Idli Restaurant  Website Project",
-      imageUrl: portfolioImg.src,
-      description:
-        "I developed a modern and user-friendly website for Anna Idli Restaurant as a freelancing project. The goal was to create an appealing online presence that showcases the menu, highlights the brand, and makes it easy for customers to explore offerings. The design focuses on simplicity, responsiveness, and a smooth user experience across all devices.",
-      liveLink: "https://anna-idli-resturant.vercel.app/",
-      work: "Solo Work",
-      status: "Active",
-      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3d animation"]
-    },
-    {
-      name: "Mahima Dental Website Project",
-      imageUrl: portfolioImg.src,
-      description:
-        "I designed and developed the Mahima Dental website for a client to establish a strong and trustworthy online presence. The project focused on creating a clean, modern, and user-friendly interface that highlights dental services, builds patient confidence, and ensures easy navigation across all devices. Special attention was given to responsive design, fast performance, and clear content structure to enhance user experience and accessibility.",
       liveLink: "https://dental-clinic-wshy.vercel.app/",
       work: "Solo Work",
       status: "Active",
-      techStack: ["React", "TypeScript", "TailwindCSS"]
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3d animation"]
     },
     {
       name: "Portfolio",
@@ -313,7 +293,7 @@ export default function RotPage() {
 
           <div className="flex flex-col items-center gap-0.5">
             <h1 className="font-mono font-semibold leading-10 text-3xl">Deepak Erati</h1>
-            <p className={styles.SWEpara}>Front-End Developer</p>
+            <p className={styles.SWEpara}>Full-Stack Developer</p>
           </div>
 
           <div className={styles.socialsDiv}>
