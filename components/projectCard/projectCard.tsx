@@ -2,20 +2,15 @@
 import type { ProjectType } from "@/lib/types"
 import styles from "./projectCard.module.css"
 import Image from "next/image"
-import { useState } from "react"
 import { Button } from "../ui/button"
 import { ArrowUpRight, Github } from "lucide-react"
 import Link from "next/link"
 
 export default function ProjectCard({ projectDetails }: { projectDetails: ProjectType }) {
-  const [showFooter, setShowFooter] = useState(true)
   const IMAGE_W = 300
   const IMAGE_H = 150
   return (
-    <div
-      className={styles.main}
-      // onClick removed
-    >
+    <div className={styles.main}>
       <div className={styles.projectItem}>
         <div className={styles.imgContainer}>
           <Image
@@ -37,9 +32,16 @@ export default function ProjectCard({ projectDetails }: { projectDetails: Projec
           </div>
         </div>
 
-        <p className="font-mono tracking-tight leading-[1.60rem] font-medium text-zinc-400">{projectDetails.description}</p>
+        <div className={styles.projectInfo}>
+          <p className="font-mono tracking-tight leading-[1.60rem] font-medium text-zinc-400">{projectDetails.description}</p>
+          <div className={styles.techChips}>
+            {projectDetails.techStack.map((tech, i) => (
+              <span key={i} className={styles.techChip}>{tech}</span>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className={`${styles.footerDiv} ${showFooter && styles.showFooter}`}>
+      <div className={styles.footerDiv}>
         <div className="ml-auto flex items-center gap-2">
           {projectDetails.githubRepo && (
             <Link href={projectDetails.githubRepo} target="_blank" aria-label="Open GitHub repository">

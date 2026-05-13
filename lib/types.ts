@@ -10,6 +10,23 @@ export interface ProjectType {
     status: string
 }
 
+export interface FreelanceProjectType {
+  title: string
+  description: string
+  problem: string
+  solution: string
+  role: string
+  techStack: string[]
+  features: string[]
+  challenges: string[]
+  results: string
+  imageUrl: string
+  liveUrl?: string
+  githubUrl?: string
+  status: "Completed" | "In Progress"
+  client?: string
+}
+
 export interface BlogType {
     // _id?: ObjectId;
     blogId: string;

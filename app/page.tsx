@@ -22,7 +22,8 @@ import {
 import { Marquee } from "@/components/magicui/marquee";
 import { useTheme } from "next-themes";
 import ProjectCard from "@/components/projectCard/projectCard";
-import type { BlogType, ProjectType } from "@/lib/types";
+import type { BlogType, ProjectType, FreelanceProjectType } from "@/lib/types";
+import FreelanceProjectCard from "@/components/freelanceProjectCard/freelanceProjectCard";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import DefaultBlogCard from "@/components/blogs/blogCards";
 import Link from "next/link";
@@ -164,6 +165,84 @@ export default function RotPage() {
       work: "Solo Work",
       status: "Active",
       techStack: ["React", "TypeScript", "TailwindCSS", "Figma"]
+    },
+  ]
+
+  const freelanceProjects: FreelanceProjectType[] = [
+    {
+      title: "MOC Cafe — Digital Presence Transformation",
+      description: "A complete website solution for MOC Cafe to establish a modern online presence, showcase their menu and ambiance, and attract more customers through a visually engaging digital storefront.",
+      problem: "MOC Cafe lacked an online presence. Potential customers couldn't discover the cafe's menu, ambiance, or location online, resulting in missed foot traffic and brand visibility.",
+      solution: "Designed and developed a full-featured website with a modern aesthetic, interactive menu display, location integration, and performance optimization for fast loading across all devices.",
+      role: "Full-Stack Developer & UI/UX Designer — end-to-end development from wireframes to deployment.",
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3D Animations"],
+      features: [
+        "Interactive menu with category filtering",
+        "3D animated hero section",
+        "Responsive mobile-first design",
+        "Contact & location integration",
+        "Performance optimized (95+ Lighthouse)",
+      ],
+      challenges: [
+        "Achieving smooth 3D animations without affecting page load time",
+        "Creating a cohesive brand identity from scratch",
+        "Ensuring consistent rendering across devices",
+      ],
+      results: "Delivered a high-performance website that effectively communicates the cafe's brand. Client reported increased customer inquiries and positive feedback on the modern design.",
+      imageUrl: "/MOC_Cafe.png",
+      liveUrl: "https://moc-cafe.vercel.app/",
+      status: "Completed",
+      client: "MOC Cafe",
+    },
+    {
+      title: "Anna Idli Restaurant — Online Brand Launch",
+      description: "A brand-focused website for Anna Idli Restaurant, designed to bring their authentic dining experience online and make it easy for customers to explore offerings and connect with the restaurant.",
+      problem: "The restaurant needed a digital presence that matched the quality of their food. Their existing setup didn't effectively showcase the menu or brand story to potential customers.",
+      solution: "Built a visually rich website with a warm color palette, seamless navigation, and a focus on menu presentation. Incorporated animations for an engaging browsing experience.",
+      role: "Solo Developer & Designer — handled concept, design, development, and deployment.",
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3D Animations"],
+      features: [
+        "Animated food gallery with lazy loading",
+        "Digital menu with pricing & categories",
+        "Mobile-optimized ordering flow",
+        "SEO-optimized structure",
+        "Social media integration",
+      ],
+      challenges: [
+        "Translating the restaurant's warm ambiance into a digital experience",
+        "Optimizing large food photography for fast loading",
+        "Balancing visual richness with performance",
+      ],
+      results: "Launched a production-ready website that serves as the restaurant's primary digital storefront, receiving consistent traffic and positive customer feedback.",
+      imageUrl: "/Anna - Idli.png",
+      liveUrl: "https://anna-idli-resturant.vercel.app/",
+      status: "Completed",
+      client: "Anna Idli Restaurant",
+    },
+    {
+      title: "Mahima Dental — Professional Healthcare Website",
+      description: "A professional healthcare website for Mahima Dental Clinic, designed to build trust and make it easy for patients to find services, book appointments, and learn about the clinic.",
+      problem: "Mahima Dental Clinic needed a professional online presence that conveyed trustworthiness and made it simple for patients to discover services and contact the clinic.",
+      solution: "Created a clean, professional website with clear service categorization, doctor profiles, appointment booking flow, and a calming color scheme appropriate for healthcare.",
+      role: "Solo Developer & Designer — full ownership of design system, development, and deployment.",
+      techStack: ["React", "TypeScript", "TailwindCSS", "Figma", "3D Animations"],
+      features: [
+        "Service catalog with detailed descriptions",
+        "Doctor/team profile section",
+        "Appointment inquiry form",
+        "Patient testimonial section",
+        "Location & contact integration",
+      ],
+      challenges: [
+        "Designing a healthcare site that feels warm yet professional",
+        "Organizing complex medical service information clearly",
+        "Ensuring accessibility and readability standards",
+      ],
+      results: "Delivered a polished healthcare website that establishes online credibility and provides patients with a seamless experience to learn about and connect with the clinic.",
+      imageUrl: "/dental thumnail.png",
+      liveUrl: "https://dental-clinic-wshy.vercel.app/",
+      status: "Completed",
+      client: "Mahima Dental Clinic",
     },
   ]
 
@@ -340,6 +419,15 @@ export default function RotPage() {
           </div>
         </div>
 
+        <div className={styles.ctaRow}>
+          <a href="#contact" className={styles.ctaPrimary}>
+            Hire Me <ArrowUpRight size={16} />
+          </a>
+          <a href="mailto:deepakerothi7@gmail.com" className={styles.ctaSecondary}>
+            Let&apos;s Talk
+          </a>
+        </div>
+
         <div className={styles.bio}>
           <p className="font-mono tracking-tighter underline leading-7 font-light text-2xl">📍Mumbai,Maharashtra</p>
         </div>
@@ -370,6 +458,13 @@ export default function RotPage() {
             }}
           >
             Certifications
+            <div className={styles.hoverThing} />
+          </div>
+          <div
+            className={`${styles.tabItem} ${displayTab == "freelancing" && styles.tabItemActive}`}
+            onClick={() => setDisplayTab("freelancing")}
+          >
+            Freelancing
             <div className={styles.hoverThing} />
           </div>
           <div
@@ -533,6 +628,32 @@ export default function RotPage() {
           </div>
         )}
 
+        {displayTab == "freelancing" && (
+          <div className={styles.freelanceSection}>
+            <div className={styles.freelanceHeader}>
+              <h2 className="font-mono font-semibold underline leading-10 text-3xl">Client Work</h2>
+              <p className={styles.freelanceSubtext}>
+                Real-world projects delivered for businesses — from restaurants to healthcare clinics.
+                Each project is a case study in problem-solving, design thinking, and clean execution.
+              </p>
+            </div>
+
+            <div className={styles.freelanceGrid}>
+              {freelanceProjects.map((project, i) => (
+                <FreelanceProjectCard key={i} project={project} />
+              ))}
+            </div>
+
+            <div className={styles.freelanceCTA}>
+              <h3 className="font-mono font-semibold text-xl">Want something built?</h3>
+              <p>Let&apos;s work together to bring your idea to life.</p>
+              <a href="#contact" className={styles.ctaPrimary}>
+                Start a Project <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
+        )}
+
         {displayTab == "articles" && (
           <>
             <div className="flex flex-col mx-auto gap-2.5 w-full max-w-[500px] mt-[50px]">
@@ -540,6 +661,56 @@ export default function RotPage() {
             </div>
           </>
         )}
+        <div className={styles.testimonialSection}>
+          <h2 className="font-mono font-semibold underline leading-10 text-3xl text-center mb-8">What Clients Say</h2>
+          <div className={styles.testimonialGrid}>
+            <div className={styles.testimonialCard}>
+              <div className={styles.testimonialStars}>★★★★★</div>
+              <p className={styles.testimonialText}>
+                &ldquo;Deepak delivered an outstanding website for our cafe. The design perfectly captures our brand,
+                and the smooth animations really wow our customers. Highly recommended!&rdquo;
+              </p>
+              <div className={styles.testimonialAuthor}>
+                <div className={styles.testimonialAvatar}>M</div>
+                <div>
+                  <p className={styles.testimonialName}>MOC Cafe</p>
+                  <p className={styles.testimonialRole}>Client — Restaurant Website</p>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.testimonialCard}>
+              <div className={styles.testimonialStars}>★★★★★</div>
+              <p className={styles.testimonialText}>
+                &ldquo;Professional, responsive, and talented. Deepak took our vision and turned it into a beautiful
+                website that our patients love. The appointment flow is seamless.&rdquo;
+              </p>
+              <div className={styles.testimonialAuthor}>
+                <div className={styles.testimonialAvatar}>M</div>
+                <div>
+                  <p className={styles.testimonialName}>Mahima Dental Clinic</p>
+                  <p className={styles.testimonialRole}>Client — Healthcare Website</p>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.testimonialCard}>
+              <div className={styles.testimonialStars}>★★★★★</div>
+              <p className={styles.testimonialText}>
+                &ldquo;The website Deepak built for our restaurant perfectly captures our vibe. Online orders
+                have increased significantly since launch. Truly a game-changer for our business.&rdquo;
+              </p>
+              <div className={styles.testimonialAuthor}>
+                <div className={styles.testimonialAvatar}>A</div>
+                <div>
+                  <p className={styles.testimonialName}>Anna Idli Restaurant</p>
+                  <p className={styles.testimonialRole}>Client — Restaurant Website</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <section
           id="contact"
           className="mt-20 mb-20 w-[100%] md:w-[70%] lg:w-[70%] mx-auto transition-all duration-300"
@@ -594,12 +765,20 @@ export default function RotPage() {
           </div>
         </section>
         {/* {styles.pageFooter} */}
+        <div className={styles.footerCTA}>
+          <h3 className="font-mono font-semibold text-xl">Available for Freelance Projects</h3>
+          <p className="opacity-70 text-sm">Let&apos;s build something great together.</p>
+          <div className={styles.footerCtaRow}>
+            <a href="mailto:deepakerothi7@gmail.com" className={styles.ctaPrimary}>
+              Hire Me <ArrowUpRight size={16} />
+            </a>
+            <Link href="/resume" className={styles.ctaSecondary}>
+              View Resume <ArrowUpRight size={16} />
+            </Link>
+          </div>
+        </div>
+
         <div className="mt-16 flex flex-col items-center gap-2 border-t border-white/10 pt-4 text-sm text-muted-foreground">
-          <Link href="/resume">
-            <p className={`flex items-center gap-[5px] underline font-mono font-bold text-2xl leading-[0.55rem] ${styles.resumeBtn}`}>
-              Resume <ArrowUpRight className="w-auto h-[26px]" size={16} />
-            </p>
-          </Link>
           <p className="text-center opacity-[0.7] max-w-[580px] font-mono font-semibold text-base tracking-tight">
             Built by Deepak Erati | Last Updated: October 28, 2025.
           </p>

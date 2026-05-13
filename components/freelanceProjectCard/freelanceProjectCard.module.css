@@ -1,0 +1,326 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bgColor2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+}
+
+.imageSection {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #4ade80;
+  font-weight: 500;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.clientBadge {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #60a5fa;
+  font-weight: 500;
+}
+
+.contentSection {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.studyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.studyItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 14px;
+  transition: all 0.3s;
+}
+
+.card:hover .studyItem {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.studyIcon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+}
+
+.studyLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.studyText {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.techStackRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techBadge {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.card:hover .techBadge {
+  background: rgba(96, 165, 250, 0.15);
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.featureLabel {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.featureCheck {
+  flex-shrink: 0;
+  color: #4ade80;
+}
+
+.challengeList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.challengeLabel {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.challengeItems {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.challengeItem {
+  font-size: 13px;
+  opacity: 0.85;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.challengeItem::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #60a5fa;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.liveBtn,
+.githubBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.liveBtn {
+  background: #60a5fa;
+  color: #000;
+}
+
+.liveBtn:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(96, 165, 250, 0.3);
+}
+
+.githubBtn {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--fgColor);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.githubBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .card {
+    border-radius: 12px;
+  }
+
+  .contentSection {
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .studyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageSection {
+    aspect-ratio: 4/3;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .liveBtn,
+  .githubBtn {
+    justify-content: center;
+  }
+}
